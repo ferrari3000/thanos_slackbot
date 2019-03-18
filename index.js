@@ -2,17 +2,17 @@ const SlackBot = require('slackbots');
 const axios = require('axios');
 
 const bot = new SlackBot({
-    token: 'xoxb-436996219559-575477629911-SbXrnlENWM3y3vamvqYV6AgA', 
+    token: 'xoxb-436996219559-575477629911-yz8T2FCbwKPBMA3kaajkBce8', 
     name: 'thanos_bot'
 });
-
-bot.on('error', (err) => console.log(err));
 
 // Message Handler
 var message;
 var channel;
 var channelId;
 var channelName;
+
+try {
 
 bot.on('message', (data) => {
     if(data.type != 'message') {
@@ -67,3 +67,7 @@ if(message != null && message.includes(' InfinityWar')) {
   }) 
 });    
 
+}
+catch {
+    bot.on('error', (err) => console.log(err));
+}
