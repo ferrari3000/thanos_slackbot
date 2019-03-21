@@ -35,7 +35,7 @@ bot.on('message', (data) => {
 
     message = data.text;
 
-    axios.post('https://login.salesforce.com/services/oauth2/token?client_id=3MVG9mclR62wycM0psa1K2qBWarzOi6zd3bjQg9WCm2bheEl1X13k6fvpFFv2Uta5HGekeiLWbVCcK8.ZM6fb&client_secret=4A8DDB698FB7FAD50E6D67C1E7E1CE530A8A5162FC359E97D4FAFE72C145931E&grant_type=password&username=trent@netjets.com&password=TAndrew*21wrJYQW9PqPnVN4W8vySOd9Kya').then(res=> {
+    axios.post('https://login.salesforce.com/services/oauth2/token?[redacted]').then(res=> {
     const bearer = res.data.access_token;
 
     console.log(data);
